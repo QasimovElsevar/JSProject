@@ -1,5 +1,5 @@
 :root{
-  --card-w: 420px;   /* smaller */
+  --card-w: 420px;  
   --radius: 12px;
 }
 
@@ -68,30 +68,35 @@ body{
   pointer-events: none;
 }
 
-/* Clear button */
-.clear-btn{
+ .clear-btn{
   position:absolute;
   right:12px;
   top:50%;
   margin-bottom: 150px;
   translate: 0 -50%;
-  width:28px; height:28px;       
-  border-radius:50%;
-  border:1px solid #d7d7d7;
-  background:#fff;
+
   display:grid; 
   place-items:center;
-  font-size:16px;
-  color:#999;
+
+  cursor:pointer;
+} 
+
+ clear-btn:hover {
+   
+  position:absolute;
+  right:12px;
+  top:50%;
+  margin-bottom: 150px;
+  translate: 0 -50%;
+   content: url("Group 70.png");
+  display:grid; 
+  place-items:center;
+
   cursor:pointer;
 }
-.clear-btn:hover{ background:#f7f7f7; }
+.add-container:hover{ filter: brightness(1.03); }
 
-/* Purple Add button */
-
-.add-wrap:hover{ filter: brightness(1.03); }
-
-.add-wrap {
+.add-container {
   position: relative;
   width: 70%;          
   margin: 10px 70px;
@@ -125,27 +130,31 @@ body{
   cursor: pointer;
 }
 
-.to-do-list {
-   width:85%;
-  padding: 14px 48px 14px 16px;  
-  font-size:16px;
-  border:1px solid #d7d7d7;
-  border-radius: 12px;           
-  outline:none;
-}
-
 .todo-list {
-  display: none;
-   width:85%;
-  padding: 14px 48px 14px 16px;  
-  font-size:16px;
-  border:1px solid #d7d7d7;
-  border-radius: 12px;           
-  outline:none;
   list-style: none;
+  padding: 20px;
+  margin-top: 20px;
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  background: white;
+  width: 100%;
+  box-sizing: border-box;
 }
-
 
 .todo-list li {
-  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.clear-img {
+  content: url("Group 71.png");
+   cursor: pointer;
+}
+
+.clear-img:hover {
+  content: url("Group 70.png");
+  cursor: pointer;
 }
