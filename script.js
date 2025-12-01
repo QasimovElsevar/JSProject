@@ -3,9 +3,9 @@ const clearBtn = document.querySelector('.clear-btn');
 const addBtn = document.querySelector('.add-btn');
 const plus = document.querySelector('.plus');
 const todoList = document.querySelector('.todo-list');
-
+const sortBtn = document.querySelector('.sort-icon')
+let isSortedAlph = false
 const listArray = [];
-
 
 clearBtn.addEventListener('click', () => { 
   input.value = ''; 
@@ -13,6 +13,7 @@ clearBtn.addEventListener('click', () => {
   
 addBtn.addEventListener('click', addPushed);
 plus.addEventListener('click', plusPushed)
+sortBtn.addEventListener('click', sortArray)
 
 function addPushed() {
   const text = input.value.trim();
@@ -26,7 +27,6 @@ function addPushed() {
   input.style.display = "none";
   clearBtn.style.display = "none";
   todoList.style.display = "block";
-
   showList();
 }
 
@@ -63,4 +63,31 @@ function plusPushed() {
   clearBtn.style.display = "block";
 
   todoList.style.display = "none";
+}
+
+function sortArray() {
+  if (!isSortedAlph) {
+  listArray.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+     sortBtn.classList.remove('sort-icon-reverse') 
+  sortBtn.classList.add('sort-icon')
+  isSortedAlph = true
+  } else {
+  listArray.sort().reverse()
+  isSortedAlph = false
+   sortBtn.classList.remove('sort-icon') 
+  sortBtn.classList.add('sort-icon-reverse')
+ 
+  }
+  changeButton()
+  console.log('----------')
+  showList()
+}
+
+function changeButton() {
+  if (!isSortedAlph) {
+ 
+  }
+  else {
+ 
+  }
 }

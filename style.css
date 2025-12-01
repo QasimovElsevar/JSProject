@@ -44,9 +44,24 @@ body{
 .sort-icon{
   opacity:.5;
   user-select:none;
-  font-size: 18px;        
+  font-size: 18px;     
+  content: url("Group 74.png")   
 }
 
+.sort-icon-reverse { 
+  opacity:.5;
+  user-select:none;
+  font-size: 18px;  
+  content: url("Group 90.png")   
+}
+
+.sort-icon-reverse:hover { 
+  content: url("Group 91.png")   
+}
+
+.sort-icon:hover {
+  content: url("Group 73.png")
+}
 
 .input-container{
   position:relative;
@@ -139,6 +154,7 @@ body{
   background: white;
   width: 100%;
   box-sizing: border-box;
+  display: none;
 }
 
 .todo-list li {
@@ -158,3 +174,4 @@ body{
   content: url("Group 70.png");
   cursor: pointer;
 }
+
