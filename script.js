@@ -40,7 +40,7 @@ function showList() {
     textSpan.textContent = task;
 
     const img = document.createElement('img');
-     img.src = "Group 77.png";     
+    img.src = "Group 77.png";     
     img.classList.add('clear-img')
      
 
