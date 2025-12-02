@@ -32,6 +32,7 @@ body{
   display:flex;
   align-items:center;
   justify-content:space-between;
+  flex-direction: column;
   margin-bottom: 20px;
 }
 
@@ -45,6 +46,7 @@ body{
   opacity:.5;
   user-select:none;
   font-size: 18px;     
+  margin-left: auto;
   content: url("Group 74.png")   
 }
 
@@ -96,7 +98,7 @@ body{
   cursor:pointer;
 } 
 
- clear-btn:hover {
+ .clear-btn:hover {
    
   position:absolute;
   right:12px;
@@ -109,7 +111,7 @@ body{
 
   cursor:pointer;
 }
-.add-container:hover{ filter: brightness(1.03); }
+.add-container:hover{ filter: brightness(1.05); }
 
 .add-container {
   position: relative;
