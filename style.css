@@ -54,6 +54,7 @@ body{
   opacity:.5;
   user-select:none;
   font-size: 18px;  
+   margin-left: auto;
   content: url("Group 90.png")   
 }
 
